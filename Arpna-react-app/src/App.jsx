@@ -6,6 +6,9 @@ import './App.css'
 function App() {
   const [count, setCount] = useState(0)
 
+  // Define a greeting based on the count
+  const greeting = count > 5 ? "Great job! Keep going!" : "Welcome to Vite + React"
+
   return (
     <>
       <div>
@@ -16,7 +19,7 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>Vite + React</h1>
+      <h1>{greeting}</h1> {/* Show dynamic greeting */}
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
